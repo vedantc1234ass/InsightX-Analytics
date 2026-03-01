@@ -9,7 +9,7 @@ st.set_page_config(page_title="UPI Transactions Dashboard", layout="wide")
 # Load CSV
 # ===========================
 try:
-    df = pd.read_csv(r"C:\Users\Ram\Desktop\project\data\upi_transactions_2024.csv")
+    df = pd.read_csv(r"Cupi_transactions_2024.csv")
 except FileNotFoundError:
     st.error("File not found! Please check the dataset path.")
     st.stop()
@@ -147,4 +147,5 @@ st.markdown(f"""
 - Peak hour in filtered data: **{filtered_df['hour_of_day'].mode()[0] if not filtered_df.empty else 'N/A'}**.
 
 This analysis dynamically adapts to applied filters, helping identify behavior patterns and business insights.
+
 """)
