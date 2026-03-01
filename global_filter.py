@@ -9,7 +9,7 @@ st.set_page_config(page_title="UPI Transactions Dashboard", layout="wide")
 # Load CSV
 # ===========================
 try:
-    df = pd.read_csv(r"Cupi_transactions_2024.csv")
+    df = pd.read_csv(r"upi_transactions_2024.csv")
 except FileNotFoundError:
     st.error("File not found! Please check the dataset path.")
     st.stop()
@@ -149,3 +149,4 @@ st.markdown(f"""
 This analysis dynamically adapts to applied filters, helping identify behavior patterns and business insights.
 
 """)
+
