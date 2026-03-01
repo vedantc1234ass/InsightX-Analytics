@@ -14,7 +14,7 @@ st.set_page_config(page_title="UPI Intelligence Lab", layout="wide")
 # ==========================================================
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\Ram\Desktop\project\data\upi_transactions_2024.csv")
+    return pd.read_csv(r"upi_transactions_2024.csv")
 
 df = load_data()
 df.columns = [c.strip().replace(" ", "_").lower() for c in df.columns]
@@ -203,4 +203,5 @@ st.divider()
 st.subheader("📊 System Intelligence Score")
 
 intelligence_score = 100 - fraud_rate
+
 st.metric("System Safety Score", f"{intelligence_score:.2f}/100")
