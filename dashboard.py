@@ -9,7 +9,7 @@ st.set_page_config(page_title="UPI Transactions Dashboard", layout="wide")
 # Load CSV
 # ===========================
 try:
-    df = pd.read_csv(r"C:\Users\Ram\Desktop\project\data\upi_transactions_2024.csv")
+    df = pd.read_csv(r"upi_transactions_2024.csv")
 except FileNotFoundError:
     st.error("File upi_transactions_2024.csv not found! Please check the path.")
     st.stop()
@@ -203,4 +203,5 @@ st.markdown(f"""
 - Weekdays dominate with **{weekday_percent:.2f}%** of total activity.
 
 This indicates user behavior is strongly influenced by daily routines and work-week cycles.
+
 """)
