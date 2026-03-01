@@ -8,7 +8,7 @@ st.set_page_config(page_title="Export Section", layout="wide")
 # Load CSV
 # ===========================
 try:
-    df = pd.read_csv(r"C:\Users\Ram\Desktop\project\data\upi_transactions_2024.csv")
+    df = pd.read_csv(r"upi_transactions_2024.csv")
 except FileNotFoundError:
     st.error("Dataset not found! Please check the path.")
     st.stop()
@@ -124,4 +124,5 @@ else:
         data=duplicate_df.to_csv(index=False).encode('utf-8'),
         file_name="upi_transactions_duplicates.csv",
         mime='text/csv'
+
     )
