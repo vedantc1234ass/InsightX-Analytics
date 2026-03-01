@@ -8,7 +8,7 @@ st.set_page_config(page_title="Query Panel", layout="wide")
 # Load CSV
 # ===========================
 try:
-    df = pd.read_csv(r"C:\Users\Ram\Desktop\project\data\upi_transactions_2024.csv")
+    df = pd.read_csv(r"upi_transactions_2024.csv")
 except FileNotFoundError:
     st.error("Dataset not found! Please check the path.")
     st.stop()
@@ -268,4 +268,5 @@ with st.expander("Risk Analysis: ⚠ Risk & Anomaly Indicators", expanded=False)
 
     if st.button("Flagged transactions by state/hour"):
         result = df[df['fraud_flag']==1].groupby(['sender_state','hour_of_day']).size()
+
         st.dataframe(result)
