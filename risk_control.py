@@ -9,7 +9,7 @@ st.set_page_config(page_title="UPI Risk Control", layout="wide")
 # Load CSV
 # ===========================
 try:
-    df = pd.read_csv(r"C:\Users\Ram\Desktop\project\data\upi_transactions_2024.csv")
+    df = pd.read_csv(r"upi_transactions_2024.csv")
 except FileNotFoundError:
     st.error("File upi_transactions_2024.csv not found! Please check the path or upload the file.")
     st.stop()
@@ -293,4 +293,5 @@ st.download_button(
     data=high_risk_df.to_csv(index=False).encode('utf-8'),
     file_name='high_risk_transactions.csv',
     mime='text/csv'
+
 )
