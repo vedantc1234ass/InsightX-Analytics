@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # ---------------- LOAD IMAGE ----------------
-landing_image = Image.open("assets/landing_image.jpg")
+landing_image = Image.open("landing_image.jpg")
 
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
@@ -151,4 +151,5 @@ st.markdown("""
 <div class="footer">
 © 2026 InsightX | Enterprise Financial Intelligence Platform
 </div>
+
 """, unsafe_allow_html=True)
